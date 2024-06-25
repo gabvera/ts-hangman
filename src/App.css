@@ -1,0 +1,204 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hangman-container{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  /* background-color: black; */
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hangman-structure{
+  margin-top: 1rem;
+  color: white;
+  position: relative;
+}
+
+.structure-top{
+  width: 10rem;
+  height: 0.4rem;
+  background-color: white;
+}
+
+.structure-down{
+  width: 0.4rem;
+  height: 20rem;
+  background-color: white;
+}
+
+.structure-base{
+  position: absolute;
+  bottom: 1.6rem;
+  right: 4.5rem;
+  width: 10rem;
+  height: 0.4rem;
+  background-color: white;
+}
+
+.structure-hang{
+  position: relative;
+  top: -20rem;
+  left: 9.6rem;
+  width: 0.4rem;
+  height: 2rem;
+  background-color: white;
+}
+
+.body-head{
+  z-index: 2;
+  position: absolute;
+  border: 10px solid white;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: white;
+  top: 2.2rem;
+  left: 8rem
+}
+
+.body-body{
+  position: absolute;
+  width: 0.4rem;
+  height: 7rem;
+  background-color: white;
+  top: 5.8rem;
+  left: 9.6rem
+}
+
+.body-r-hand{
+  position: absolute;
+  width: 0.4rem;
+  height: 4rem;
+  background-color: white;
+  top: 5.8rem;
+  rotate: -50deg;
+  left: 8rem
+}
+
+.body-l-hand{
+  position: absolute;
+  width: 0.4rem;
+  height: 4rem;
+  background-color: white;
+  top: 5.8rem;
+  rotate: 50deg;
+  left: 11.2rem
+}
+
+.body-l-leg{
+  position: absolute;
+  width: 0.4rem;
+  height: 4rem;
+  background-color: white;
+  top: 12rem;
+  rotate: 140deg;
+  left: 10.8rem
+}
+
+.body-r-leg{
+  position: absolute;
+  width: 0.4rem;
+  height: 4rem;
+  background-color: white;
+  top: 12rem;
+  rotate: -140deg;
+  left: 8.4rem
+}
+
+.face-container{
+  z-index: 4;
+  /* background-color: blue; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.right-eye{
+  background-color: red;
+  position: absolute;
+  top: 0.3rem;
+  rotate: 50deg;
+  left: 1.8rem;
+  height: 1rem;
+  width: 0.2rem;;
+}
+
+.second-right-eye{
+  background-color: red;
+  position: absolute;
+  top: 0.3rem;
+  rotate: -50deg;
+  left: 1.8rem;
+  height: 1rem;
+  width: 0.2rem;;
+}
+
+.left-eye{
+  background-color: red;
+  position: absolute;
+  top: 0.3rem;
+  rotate: 50deg;
+  right: 1.8rem;
+  height: 1rem;
+  width: 0.2rem;;
+}
+
+.second-left-eye{
+  background-color: red;
+  position: absolute;
+  top: 0.3rem;
+  rotate: -50deg;
+  right: 1.8rem;
+  height: 1rem;
+  width: 0.2rem;;
+}
+
+.mouth{
+  background-color: red;
+  position: absolute;
+  top: 1.5rem;
+  rotate: -90deg;
+  height: 1rem;
+  left: 46%;
+  width: 0.2rem;
+  border-radius: 50%;
+}
+
+.game-status{
+  margin-bottom: 1rem;
+}
+
+.game-word{
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.alphabet-container{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.letter{
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 0.6rem;
+}
+
+.clicked{
+  background-color: black;
+}
